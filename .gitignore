@@ -1,0 +1,14 @@
+node_modules
+
+
+.vercel
+.output
+
+build
+public/build
+.env
+.cache
+
+/app/styles/*.css
+
+.npmrc
