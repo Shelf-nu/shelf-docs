@@ -1,4 +1,11 @@
-api
 node_modules
-public
+
 .cache
+.env
+.vercel
+.output
+
+/build/
+/public/build
+/api
+/app/styles/*.css
