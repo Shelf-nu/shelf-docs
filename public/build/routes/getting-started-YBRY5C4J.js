@@ -9,10 +9,11 @@ import {
 // mdx:routes/getting-started.mdx
 var import_jsx_dev_runtime = __toESM(require_jsx_dev_runtime());
 var attributes = {
-  "meta": {
-    "title": "Getting started",
+  "meta": [{
+    "title": "Getting started"
+  }, {
     "description": "Isn't this awesome?"
-  }
+  }]
 };
 function MDXContent(props = {}) {
   const _components = Object.assign({
@@ -20,16 +21,16 @@ function MDXContent(props = {}) {
   }, props.components), { wrapper: MDXLayout } = _components;
   const _content = /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_jsx_dev_runtime.Fragment, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(_components.h1, { children: "Hello Content!" }, void 0, false, {
     fileName: "mdx:routes/getting-started.mdx",
-    lineNumber: 13,
+    lineNumber: 14,
     columnNumber: 22
   }, this) }, void 0, false, {
     fileName: "mdx:routes/getting-started.mdx",
-    lineNumber: 13,
+    lineNumber: 14,
     columnNumber: 20
   }, this);
   return MDXLayout ? /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(MDXLayout, { ...props, children: _content }, void 0, false, {
     fileName: "mdx:routes/getting-started.mdx",
-    lineNumber: 14,
+    lineNumber: 15,
     columnNumber: 22
   }, this) : _content;
 }
@@ -42,4 +43,4 @@ export {
   handle,
   meta
 };
-//# sourceMappingURL=/build/routes/getting-started-TTVKOA6C.js.map
+//# sourceMappingURL=/build/routes/getting-started-YBRY5C4J.js.map
