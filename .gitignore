@@ -9,4 +9,4 @@ node_modules
 /public/build
 /api
 /app/styles/*.css
-.cache
+/.cache
