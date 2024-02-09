@@ -1,6 +1,6 @@
 export default {
     base: '/',
-	lang: 'en-US',
+    lang: 'en-US',
     title: 'Remix Docs',
     description: 'Just playing around.',
     publicURL: 'http://localhost:300',
@@ -13,13 +13,15 @@ export default {
     ],
     sidebar: [
         {
-            title: 'Introduction',
+            title: 'Documentation',
             links: [
+                { title: 'Introduction', href: '/docs' },
                 { title: 'Getting started', href: '/docs/getting-started' },
-                { title: 'Installation', href: '/docs/installation' },
+                { title: 'Asset search', href: '/docs/asset-search' },
+                { title: 'Contribute', href: '/docs/contribute' },
             ],
         },
-        
+
     ],
     search: {
         enabled: true,
