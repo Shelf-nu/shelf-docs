@@ -23,7 +23,8 @@ import { getThemeSession } from "~/utils/theme.server";
 import { CacheControl } from "~/utils/cache-control.server";
 import ErrorPage from "~/components/ErrorPage";
 
-import tailwindStyles from "./tailwind.css";
+import tailwindStyles from "./styles/tailwind.css";
+import fontStyles from "./styles/fonts.css";
 
 //import type {SideBarItem, SidebarGroup} from '~/utils/docs.server';
 import Container from "~/components/layout/Container";
@@ -60,12 +61,8 @@ export type LoaderData = {
 };
 
 export const links: LinksFunction = () => [
-  { rel: "preconnect", href: "//fonts.gstatic.com", crossOrigin: "anonymous" },
+  { rel: "stylesheet", href: fontStyles },
   { rel: "stylesheet", href: tailwindStyles },
-  {
-    rel: "stylesheet",
-    href: "//fonts.googleapis.com/css?family=Work+Sans:300,400,600,700&amp;lang=en",
-  },
 ];
 
 export const headers: HeadersFunction = () => {

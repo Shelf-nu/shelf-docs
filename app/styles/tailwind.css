@@ -23,16 +23,18 @@ html.light {
 html.dark {
   @apply bg-gray-900;
 }
-
+body {
+  @apply font-inter;
+}
 /* https://seek-oss.github.io/capsize/ */
 .capsize::before {
-  content: '';
+  content: "";
   margin-bottom: -0.098em;
   display: table;
 }
 
 .capsize::after {
-  content: '';
+  content: "";
   margin-top: -0.219em;
   display: table;
 }
@@ -73,11 +75,12 @@ pre {
   @apply w-full max-w-full overflow-auto;
 }
 
-p { 
+p {
   @apply my-2;
 }
 
-ul, li {
+ul,
+li {
   @apply my-2;
 }
 
@@ -94,15 +97,15 @@ h3 {
 }
 
 h4 {
-@apply my-2 text-lg font-bold tracking-tight text-black md:text-lg dark:text-white;
+  @apply my-2 text-lg font-bold tracking-tight text-black md:text-lg dark:text-white;
 }
 
 h5 {
-@apply my-2 text-lg font-medium tracking-tight text-black md:text-lg dark:text-white;
+  @apply my-2 text-lg font-medium tracking-tight text-black md:text-lg dark:text-white;
 }
 
 h6 {
-@apply my-2 text-lg tracking-tight text-black md:text-lg dark:text-white;
+  @apply my-2 text-lg tracking-tight text-black md:text-lg dark:text-white;
 }
 
 @supports not (backdrop-filter: none) {
@@ -139,7 +142,7 @@ h6 {
 
 .prose .anchor:after {
   @apply text-gray-300 dark:text-gray-700;
-  content: '#';
+  content: "#";
 }
 
 .prose *:hover > .anchor {
@@ -168,7 +171,6 @@ h6 {
 .highlight-line {
   @apply block px-4 -mx-4 bg-gray-100 border-l-4 border-blue-500 dark:bg-gray-800;
 }
-
 
 /*
 <callout-info>
@@ -254,10 +256,10 @@ h6 {
 .prose callout-success.important * {
   @apply text-lg;
 
-/*  
+  /*  
   font-size: 1.4rem;
   font-weight: bold;
-*/  
+*/
 }
 
 .prose callout-muted:before,
@@ -267,7 +269,7 @@ h6 {
 .prose callout-success:before {
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   opacity: 0.1;
@@ -332,8 +334,8 @@ h6 {
 }
 
 /* Remove Safari input shadow on mobile */
-input[type='text'],
-input[type='email'] {
+input[type="text"],
+input[type="email"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -367,8 +369,8 @@ input[type='email'] {
   margin: 0 !important;
 }
 
-pre[class*='language-'] {
-  color: theme('colors.slate.50');
+pre[class*="language-"] {
+  color: theme("colors.slate.50");
 }
 
 .token.tag,
@@ -377,7 +379,7 @@ pre[class*='language-'] {
 .token.selector .class,
 .token.selector.class,
 .token.function {
-  color: theme('colors.pink.400');
+  color: theme("colors.pink.400");
 }
 
 .token.attr-name,
@@ -385,32 +387,32 @@ pre[class*='language-'] {
 .token.rule,
 .token.pseudo-class,
 .token.important {
-  color: theme('colors.slate.300');
+  color: theme("colors.slate.300");
 }
 
 .token.module {
-  color: theme('colors.pink.400');
+  color: theme("colors.pink.400");
 }
 
 .token.attr-value,
 .token.class,
 .token.string,
 .token.property {
-  color: theme('colors.sky.300');
+  color: theme("colors.sky.300");
 }
 
 .token.punctuation,
 .token.attr-equals {
-  color: theme('colors.slate.500');
+  color: theme("colors.slate.500");
 }
 
 .token.unit,
 .language-css .token.function {
-  color: theme('colors.teal.200');
+  color: theme("colors.teal.200");
 }
 
 .token.comment,
 .token.operator,
 .token.combinator {
-  color: theme('colors.slate.400');
+  color: theme("colors.slate.400");
 }
