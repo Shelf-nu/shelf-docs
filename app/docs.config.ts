@@ -15,9 +15,9 @@ export default {
       links: [
         { title: "Introduction", href: "/docs" },
         { title: "Getting started", href: "/docs/getting-started" },
+        { title: "Docker Support", href: "/docs/docker-support" },
         { title: "Asset search", href: "/docs/asset-search" },
         { title: "Contribute", href: "/docs/contribute" },
-        { title: "Docker Support", href: "/docs/docker-support" },
       ],
     },
   ],

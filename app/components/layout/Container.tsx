@@ -27,7 +27,7 @@ export default function Container({ children }) {
   let [isScrolled, setIsScrolled] = React.useState(false);
   let [isSearching, setIsSearching] = React.useState(false);
 
-  const [, setTheme] = useTheme();
+  const [theme, setTheme] = useTheme();
 
   const toggleTheme = () => {
     setTheme((prevTheme) =>
@@ -62,8 +62,12 @@ export default function Container({ children }) {
         <div className="relative flex flex-grow basis-0 items-center space-x-3 md:block  h-[32px]">
           <Link to="/">
             <img
-              src="https://uploads-ssl.webflow.com/64186faca4f0a0ec048fb2dd/6418916afabf4171978cf0a9_shelf-logo.svg"
-              style={{ width: "100px" }}
+              src={
+                theme === Theme.DARK
+                  ? "/images/logo-white.png"
+                  : "/images/logo.png"
+              }
+              className="w-[100px] transition-all"
               alt="Image"
             />
           </Link>
