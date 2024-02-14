@@ -17,6 +17,7 @@ export default {
         { title: "Getting started", href: "/docs/getting-started" },
         { title: "Asset search", href: "/docs/asset-search" },
         { title: "Contribute", href: "/docs/contribute" },
+        { title: "Docker Support", href: "/docs/docker-support" },
       ],
     },
   ],
