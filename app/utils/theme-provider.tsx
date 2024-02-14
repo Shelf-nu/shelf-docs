@@ -10,7 +10,7 @@ import {
 } from "react";
 
 enum Theme {
-  DARK = "light",
+  DARK = "dark",
   LIGHT = "light",
 }
 const themes: Array<Theme> = Object.values(Theme);
@@ -19,9 +19,9 @@ type ThemeContextType = [Theme | null, Dispatch<SetStateAction<Theme | null>>];
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
-const prefersDarkMQ = "(prefers-color-scheme: light)";
+const prefersDarkMQ = "(prefers-color-scheme: dark)";
 const getPreferredTheme = () =>
-  window.matchMedia(prefersDarkMQ).matches ? Theme.LIGHT : Theme.LIGHT;
+  window.matchMedia(prefersDarkMQ).matches ? Theme.DARK : Theme.LIGHT;
 
 function ThemeProvider({
   children,
@@ -252,13 +252,13 @@ function Themed({
     // what we'll render in the client during hydration.
     return (
       <>
-        {createElement("dark-mode", null, light)}
+        {createElement("dark-mode", null, dark)}
         {createElement("light-mode", null, light)}
       </>
     );
   }
 
-  return <>{themeToReference === "light" ? light : light}</>;
+  return <>{themeToReference === "light" ? light : dark}</>;
 }
 
 function isTheme(value: unknown): value is Theme {

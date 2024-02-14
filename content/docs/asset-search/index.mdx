@@ -20,7 +20,7 @@ After doing some research we chose an approach that might not be the most perfor
 2. The view has a relation to Asset model
 3. Populate the view with the correct query. Here is the example query we used as a start:
 
-```SQL
+```SQL filename=app/routes/my-route.sql
 -- create view for searching assets
 CREATE OR REPLACE VIEW "AssetSearchView" AS
 SELECT
