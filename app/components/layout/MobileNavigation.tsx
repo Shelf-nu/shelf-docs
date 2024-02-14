@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from "react";
 import { Link, NavLink } from "@remix-run/react";
-import { Dialog } from '@headlessui/react'
-import Navigation from '~/components/layout/Navigation'
-import config from '~/docs.config';
-import clsx from 'clsx';
+import { Dialog } from "@headlessui/react";
+import Navigation from "~/components/layout/Navigation";
+import config from "~/docs.config";
+import clsx from "clsx";
 
 function MenuIcon(props) {
   return (
@@ -17,7 +17,7 @@ function MenuIcon(props) {
     >
       <path d="M4 7h16M4 12h16M4 17h16" />
     </svg>
-  )
+  );
 }
 
 function CloseIcon(props) {
@@ -32,19 +32,19 @@ function CloseIcon(props) {
     >
       <path d="M5 5l14 14M19 5l-14 14" />
     </svg>
-  )
+  );
 }
 
 export default function MobileNavigation() {
-  let [isOpen, setIsOpen] = useState(false)
+  let [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    if (!isOpen) return
+    if (!isOpen) return;
 
     function onRouteChange() {
-      setIsOpen(false)
+      setIsOpen(false);
     }
-  }, [isOpen])
+  }, [isOpen]);
 
   return (
     <>
@@ -59,10 +59,10 @@ export default function MobileNavigation() {
       <Dialog
         open={isOpen}
         onClose={setIsOpen}
-        className="fixed inset-0 z-50 flex items-start overflow-y-auto bg-slate-900/50 pr-10 backdrop-blur lg:hidden"
+        className="fixed inset-0 z-50 flex items-start overflow-y-auto bg-gray-900/50 pr-10 backdrop-blur lg:hidden"
         aria-label="Navigation"
       >
-        <Dialog.Panel className="min-h-full w-full max-w-xs bg-white px-4 pt-5 pb-12 dark:bg-slate-900 sm:px-6">
+        <Dialog.Panel className="min-h-full w-full max-w-xs bg-white px-4 pt-5 pb-12 dark:bg-[#343434] sm:px-6">
           <div className="flex items-center">
             <button
               type="button"
@@ -71,20 +71,17 @@ export default function MobileNavigation() {
             >
               <CloseIcon className="h-6 w-6 stroke-slate-500" />
             </button>
-            <Link to="/docs" className="ml-6" aria-label="Home page">
-              {config.title}
-            </Link>
           </div>
           <ul
-                role="list"
-                className="mt-2 space-y-2 lg:mt-4 lg:space-y-4"
-              >
-          
-          
-          </ul>
-          <Navigation navigation={config.sidebar} className="mt-5 px-1" />
+            role="list"
+            className="mt-2 space-y-2 lg:mt-4 lg:space-y-4"
+          ></ul>
+          <Navigation
+            navigation={config.sidebar}
+            className="mt-5 px-1"
+          />
         </Dialog.Panel>
       </Dialog>
     </>
-  )
+  );
 }

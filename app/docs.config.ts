@@ -1,8 +1,8 @@
 export default {
   base: "/",
   lang: "en-US",
-  title: "Remix Docs",
-  description: "Just playing around.",
+  title: "Shelf Docs",
+  description: "Documentation for Shelf.nu repository",
   publicURL: "http://localhost:300",
   nav: [
     { text: "Docs", link: "/docs" },
@@ -13,8 +13,7 @@ export default {
     {
       title: "Documentation",
       links: [
-        { title: "Introduction", href: "/docs" },
-        { title: "Getting started", href: "/docs/getting-started" },
+        { title: "Getting started", href: "/docs" },
         { title: "Docker Support", href: "/docs/docker-support" },
         { title: "Asset search", href: "/docs/asset-search" },
         { title: "Contribute", href: "/docs/contribute" },
