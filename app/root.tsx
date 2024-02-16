@@ -80,7 +80,7 @@ export const loader: LoaderFunction = async ({ request }) => {
     canonical: removeTrailingSlash(`${url}${path}`),
     requestInfo: {
       url: removeTrailingSlash(`${url}${path}`),
-      origin: getDomainUrl(request),
+      origin: url,
       path: new URL(request.url).pathname,
     },
   });
@@ -89,16 +89,10 @@ function App() {
   const data = useLoaderData<LoaderData>();
   const { theme } = data;
   return (
-    <html
-      lang="en"
-      className={theme ?? ""}
-    >
+    <html lang="en" className={theme ?? ""}>
       <head>
         <meta charSet="utf-8" />
-        <meta
-          name="viewport"
-          content="width=device-width,initial-scale=1"
-        />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
         <Meta />
         {data.requestInfo && (
           <link
@@ -154,11 +148,7 @@ export function ErrorBoundary() {
   }
   return (
     <ErrorDocument title="Error!">
-      <ErrorPage
-        code={status}
-        title={`There was an error`}
-        message={message}
-      />
+      <ErrorPage code={status} title={`There was an error`} message={message} />
     </ErrorDocument>
   );
 }
@@ -171,16 +161,10 @@ function ErrorDocument({
   title?: string;
 }) {
   return (
-    <html
-      className="h-full"
-      lang="en"
-    >
+    <html className="h-full" lang="en">
       <head>
         <meta charSet="utf-8" />
-        <meta
-          name="viewport"
-          content="width=device-width,initial-scale=1"
-        />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
         {title ? <title>{title}</title> : null}
         <Meta />
         <Links />
