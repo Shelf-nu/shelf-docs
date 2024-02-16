@@ -139,6 +139,7 @@ export default function Container({ children }) {
               )}
             </>
           )}
+          <span className="bg-black text-white hidden">{theme}</span>
         </div>
       </header>
       <div className="relative mx-auto flex max-w-8xl justify-center sm:px-2 lg:px-8 xl:px-12 bg-white dark:bg-gray-800">
