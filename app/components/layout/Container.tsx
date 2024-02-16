@@ -68,12 +68,13 @@ export default function Container({ children }) {
         <div className="relative flex flex-grow basis-0 items-center space-x-3 md:block  h-[32px]">
           <Link to="/">
             <img
-              src={
-                theme === Theme.DARK
-                  ? "/images/logo-white.png"
-                  : "/images/logo.png"
-              }
-              className="w-[100px] transition-all"
+              src="/images/logo.png"
+              className="logo-primary w-[100px] transition-all"
+              alt="Image"
+            />
+            <img
+              src="/images/logo-white.png"
+              className="logo-white hidden w-[100px] transition-all"
               alt="Image"
             />
           </Link>
@@ -139,7 +140,6 @@ export default function Container({ children }) {
               )}
             </>
           )}
-          <span className="bg-black text-white hidden">{theme}</span>
         </div>
       </header>
       <div className="relative mx-auto flex max-w-8xl justify-center sm:px-2 lg:px-8 xl:px-12 bg-white dark:bg-gray-800">
