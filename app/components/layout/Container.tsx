@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { Link, NavLink } from "@remix-run/react";
+import { Link, NavLink, useLoaderData } from "@remix-run/react";
 import * as React from "react";
 
 import { Theme, Themed, useTheme } from "~/utils/theme-provider";
@@ -12,6 +12,7 @@ import { SearchPalette } from "~/components/Search";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
 
 import Footer from "~/components/layout/Footer";
+import { LoaderData } from "~/root";
 
 const GitHubIcon = (props) => (
   <svg
@@ -24,10 +25,11 @@ const GitHubIcon = (props) => (
 );
 
 export default function Container({ children }) {
+  const { theme } = useLoaderData<LoaderData>();
   let [isScrolled, setIsScrolled] = React.useState(false);
   let [isSearching, setIsSearching] = React.useState(false);
 
-  const [theme, setTheme] = useTheme();
+  const [, setTheme] = useTheme();
 
   const toggleTheme = () => {
     setTheme((prevTheme) =>
