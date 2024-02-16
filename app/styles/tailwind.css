@@ -125,7 +125,11 @@ h6 {
 }
 
 .prose blockquote {
-  @apply p-4 italic border-l-4 text-gray-600 border-gray-500 dark:border-gray-200;
+  @apply p-2 italic border-l-4 text-gray-600 border-gray-500 dark:border-gray-200 mx-0 my-3;
+}
+
+.prose blockquote p {
+  @apply mt-0;
 }
 
 .prose p {
