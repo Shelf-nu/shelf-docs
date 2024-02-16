@@ -73,7 +73,7 @@ function ThemeProvider({
   useEffect(() => {
     const mediaQuery = window.matchMedia(prefersDarkMQ);
     const handleChange = () => {
-      setTheme(mediaQuery.matches ? Theme.LIGHT : Theme.LIGHT);
+      setTheme(mediaQuery.matches ? Theme.DARK : Theme.LIGHT);
     };
     mediaQuery.addEventListener("change", handleChange);
     return () => mediaQuery.removeEventListener("change", handleChange);

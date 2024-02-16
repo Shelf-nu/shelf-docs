@@ -25,19 +25,23 @@ const GitHubIcon = (props) => (
 );
 
 export default function Container({ children }) {
-  const { theme } = useLoaderData<LoaderData>();
   let [isScrolled, setIsScrolled] = React.useState(false);
   let [isSearching, setIsSearching] = React.useState(false);
 
-  const [, setTheme] = useTheme();
+  const [theme, setTheme] = useTheme();
 
   const toggleTheme = () => {
     setTheme((prevTheme) =>
       prevTheme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT
     );
   };
-
+  const prefersDarkMQ = "(prefers-color-scheme: dark)";
+  const userPreferredTheme = () =>
+    window.matchMedia(prefersDarkMQ).matches ? Theme.DARK : Theme.LIGHT;
   React.useEffect(() => {
+    if (theme === null) {
+      setTheme(userPreferredTheme());
+    }
     function onScroll() {
       setIsScrolled(window.scrollY > 0);
     }
