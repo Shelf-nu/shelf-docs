@@ -68,12 +68,13 @@ export default function Container({ children }) {
         <div className="relative flex flex-grow basis-0 items-center space-x-3 md:block  h-[32px]">
           <Link to="/">
             <img
-              src={
-                theme === Theme.DARK
-                  ? "/images/logo-white.png"
-                  : "/images/logo.png"
-              }
-              className="w-[100px] transition-all"
+              src="/images/logo.png"
+              className="logo-primary w-[100px] transition-all"
+              alt="Image"
+            />
+            <img
+              src="/images/logo-white.png"
+              className="logo-white hidden w-[100px] transition-all"
               alt="Image"
             />
           </Link>

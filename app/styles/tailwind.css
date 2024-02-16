@@ -420,3 +420,11 @@ pre[class*="language-"] {
 .token.combinator {
   color: theme("colors.slate.400");
 }
+
+.dark .logo-white {
+  @apply block;
+}
+
+.dark .logo-primary {
+  @apply hidden;
+}
