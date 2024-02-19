@@ -25,7 +25,7 @@ import ErrorPage from "~/components/ErrorPage";
 
 import tailwindStyles from "./styles/tailwind.css";
 import fontStyles from "./styles/fonts.css";
-
+import highlightingStyles from "prismjs/themes/prism-tomorrow.css";
 //import type {SideBarItem, SidebarGroup} from '~/utils/docs.server';
 import Container from "~/components/layout/Container";
 
@@ -63,6 +63,7 @@ export type LoaderData = {
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: fontStyles },
   { rel: "stylesheet", href: tailwindStyles },
+  { rel: "stylesheet", href: highlightingStyles },
 ];
 
 export const headers: HeadersFunction = () => {
