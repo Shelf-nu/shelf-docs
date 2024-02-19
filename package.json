@@ -1,5 +1,5 @@
 {
-  "name": "remix-docs-template",
+  "name": "shelf-docs",
   "private": true,
   "sideEffects": false,
   "scripts": {
@@ -34,8 +34,10 @@
     "p-queue": "^7.3.4",
     "pretty-cache-header": "^1.0.0",
     "prism-react-renderer": "^2.0.6",
+    "prismjs": "^1.29.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-prism": "^4.3.2",
     "reading-time": "^1.5.0",
     "remix-flat-routes": "^0.5.10",
     "remix-seo": "^0.1.0",

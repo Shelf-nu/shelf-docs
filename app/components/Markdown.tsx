@@ -16,6 +16,9 @@ import {
 
 import cn from "classnames";
 
+import "prismjs";
+import Prism from "react-prism";
+
 const callOutStyles = {
   note: {
     container:
@@ -188,6 +191,18 @@ Callout.scheme = {
   },
 };
 
+export function Fence({ children, language }) {
+  return (
+    <Prism
+      key={language}
+      component="pre"
+      className={`language-${language}`}
+    >
+      {children}
+    </Prism>
+  );
+}
+
 type Props = {
   content: RenderableTreeNodes;
   components?: Record<string, React.ComponentType>;
@@ -201,6 +216,7 @@ export function MarkdownView({ content, components = {} }: Props) {
           Callout,
           QuickLinks,
           QuickLink,
+          Fence,
         },
       })}
     </>
