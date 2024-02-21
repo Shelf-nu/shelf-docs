@@ -107,6 +107,46 @@ function App() {
           name="viewport"
           content="width=device-width,initial-scale=1"
         />
+        <meta
+          content="Well-organized and comprehensive documentation for Shelf which is a free open source asset management software that makes it easy to track, label, and maintain all your company's equipment and inventory in one place."
+          name="description"
+        />
+        <meta
+          content="Docs for Shelf - Free Open Source Asset Management Software"
+          property="og:title"
+        />
+        <meta
+          content="Well-organized and comprehensive documentation for Shelf which is a free open source asset management software that makes it easy to track, label, and maintain all your company's equipment and inventory in one place."
+          property="og:description"
+        />
+        <meta
+          content="https://assets-global.website-files.com/64186faca4f0a0ec048fb2dd/64257e8ed4819a22217e0504_open-graph-default.jpg"
+          property="og:image"
+        />
+        <meta
+          content="Docs for Shelf - Free Open Source Asset Management Software"
+          property="twitter:title"
+        />
+        <meta
+          content="Well-organized and comprehensive documentation for Shelf which is a free open source asset management software that makes it easy to track, label, and maintain all your company's equipment and inventory in one place."
+          property="twitter:description"
+        />
+        <meta
+          content="https://assets-global.website-files.com/64186faca4f0a0ec048fb2dd/64257e8ed4819a22217e0504_open-graph-default.jpg"
+          property="twitter:image"
+        />
+        <meta
+          property="og:type"
+          content="website"
+        />
+        <meta
+          content="summary_large_image"
+          name="twitter:card"
+        />
+        <meta
+          content="width=device-width, initial-scale=1"
+          name="viewport"
+        />
         <Meta />
         {data.requestInfo && (
           <link
