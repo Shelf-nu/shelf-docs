@@ -15,6 +15,7 @@ export default {
       links: [
         { title: "Getting started", href: "/docs" },
         { title: "Docker Support", href: "/docs/docker-support" },
+        { title: "Shelf.config.ts", href: "/docs/shelf.config.ts" },
         { title: "Asset search", href: "/docs/asset-search" },
         { title: "Contribute", href: "/docs/contribute" },
       ],
