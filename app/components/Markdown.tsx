@@ -16,8 +16,9 @@ import {
 
 import cn from "classnames";
 
-import "prismjs";
-import Prism from "react-prism";
+import Prism from "prismjs";
+import loadLanguages from "prismjs/components/";
+import parse from "html-react-parser";
 
 const callOutStyles = {
   note: {
@@ -191,15 +192,23 @@ Callout.scheme = {
   },
 };
 
+loadLanguages(["sql", "sh", "shell", "jsx", "tsx", "ts", ".json"]);
 export function Fence({ children, language }) {
   return (
-    <Prism
-      key={language}
-      component="pre"
-      className={`language-${language}`}
-    >
-      {children}
-    </Prism>
+    <>
+      {language ? (
+        <pre
+          key={language}
+          className={`language-${language}`}
+        >
+          {parse(
+            Prism.highlight(children, Prism.languages[language], language)
+          )}
+        </pre>
+      ) : (
+        <pre>{children}</pre>
+      )}
+    </>
   );
 }
 
